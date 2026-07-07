@@ -205,34 +205,14 @@ document.querySelectorAll('.subnav-btn').forEach((btn) => {
   btn.addEventListener('click', () => switchSection(btn.dataset.target));
 });
 
-// ===== View Resume modal =====
-const resumeModal = document.getElementById('resume-modal');
-const resumeModalBackdrop = document.getElementById('resume-modal-backdrop');
-const resumeModalClose = document.getElementById('resume-modal-close');
 
-function openResumeModal() {
-  if (!resumeModal) return;
-  resumeModal.classList.add('active');
-}
 
-function closeResumeModal() {
-  if (!resumeModal) return;
-  resumeModal.classList.remove('active');
-}
 
-const viewResumeBtn = document.getElementById('view-resume-btn');
-if (viewResumeBtn) viewResumeBtn.addEventListener('click', (e) => {
-  if (viewResumeBtn instanceof HTMLAnchorElement && viewResumeBtn.getAttribute('href') !== '#') return;
-  e.preventDefault();
-  openResumeModal();
-});
 
-if (resumeModalBackdrop) resumeModalBackdrop.addEventListener('click', closeResumeModal);
-if (resumeModalClose) resumeModalClose.addEventListener('click', closeResumeModal);
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') setNavOpen(false);
-  if (e.key === 'Escape') closeResumeModal();
+
 });
 
 // ===== Contact form (FormSubmit AJAX) =====
