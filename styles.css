@@ -987,6 +987,44 @@ body {
   min-height: 20px;
 }
 
+.form-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.form-status.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.form-status.success #status-icon {
+  stroke: #1D9E75;
+}
+
+.form-status.success #status-text {
+  color: #1D9E75;
+}
+
+.form-status.error #status-icon {
+  stroke: #E24B4A;
+}
+
+.form-status.error #status-text {
+  color: #E24B4A;
+}
+
+.form-status.sending #status-text {
+  color: var(--text-secondary, #666);
+}
+
+#status-icon {
+  flex-shrink: 0;
+}
+
 /* Footer row inside about */
 #about-footer {
   margin-top: 48px;
