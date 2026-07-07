@@ -265,19 +265,52 @@ function validateContactForm() {
   return ok;
 }
 
+const statusIcon = document.getElementById('status-icon');
+const statusIconPath = document.getElementById('status-icon-path');
+const statusText = document.getElementById('status-text');
+
+const ICON_PATHS = {
+  success: 'M20 6L9 17l-5-5',
+  error: 'M18 6L6 18M6 6l12 12',
+};
+
+function setStatus(type, message) {
+  if (!contactStatus) return;
+
+  contactStatus.classList.remove('success', 'error', 'sending', 'show');
+
+  if (type === 'sending') {
+    if (statusIcon) statusIcon.style.display = 'none';
+    if (statusText) statusText.textContent = message;
+    contactStatus.classList.add('sending');
+  } else if (type === 'success' || type === 'error') {
+    if (statusIcon) statusIcon.style.display = 'block';
+    if (statusIconPath) statusIconPath.setAttribute('d', ICON_PATHS[type]);
+    if (statusText) statusText.textContent = message;
+    contactStatus.classList.add(type);
+  } else {
+    if (statusIcon) statusIcon.style.display = 'none';
+    if (statusText) statusText.textContent = message;
+  }
+
+  requestAnimationFrame(() => {
+    contactStatus.classList.add('show');
+  });
+}
+
 if (contactForm) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    if (contactStatus) contactStatus.textContent = '';
+    setStatus('', '');
 
     if (!validateContactForm()) {
-      if (contactStatus) contactStatus.textContent = 'Please fix the highlighted fields.';
+      setStatus('error', 'Please fix the highlighted fields.');
       return;
     }
 
     try {
       if (contactSubmit) contactSubmit.setAttribute('disabled', 'true');
-      if (contactStatus) contactStatus.textContent = 'Sending…';
+      setStatus('sending', 'Sending…');
 
       const formData = new FormData(contactForm);
       const res = await fetch(contactForm.action, {
@@ -288,9 +321,9 @@ if (contactForm) {
 
       if (!res.ok) throw new Error('Request failed');
       contactForm.reset();
-      if (contactStatus) contactStatus.textContent = 'Message sent successfully. Thank you!';
+      setStatus('success', 'Message sent successfully. Thank you!');
     } catch (err) {
-      if (contactStatus) contactStatus.textContent = 'Failed to send. Please email me directly instead.';
+      setStatus('error', 'Failed to send. Please email me directly instead.');
     } finally {
       if (contactSubmit) contactSubmit.removeAttribute('disabled');
     }
