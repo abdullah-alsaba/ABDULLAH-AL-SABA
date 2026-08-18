@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SportNest — Full-stack sports facility booking management system built with Next.js, Node.js, Express.js, and MongoDB.">
+  <title>SportNest — Details</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="../favicon/my-brand.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    html,
+    body {
+      overflow: auto;
+      cursor: auto;
+    }
+
+    #cursor,
+    .echo {
+      display: none !important;
+    }
+
+    .detail-wrap {
+      min-height: 100vh;
+      background: #0e0e0e;
+      padding: 56px 20px;
+    }
+
+    .detail-inner {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 28px;
+    }
+
+    .detail-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-list li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.55);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 520px) {
+      .detail-inner {
+        padding: 20px;
+      }
+
+      .detail-top {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="detail-wrap">
+    <section class="detail-inner">
+      <div class="detail-top">
+        <div>
+          <p class="about-eyebrow">Project Details</p>
+          <h1 class="about-heading">SportNest.</h1>
+        </div>
+        <a class="project-link" href="../index.html">Back to Home</a>
+      </div>
+
+      <div class="project-actions" style="margin-bottom: 16px;">
+        <a class="project-link" href="https://sportnest-teal.vercel.app/" target="_blank" rel="noreferrer">Live</a>
+        <a class="project-link" href="https://github.com/abdullah-alsaba/SportNest-client" target="_blank" rel="noreferrer">Client</a>
+        <a class="project-link" href="https://github.com/abdullah-alsaba/SportNest-server" target="_blank" rel="noreferrer">Server</a>
+      </div>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Tech Stack</p>
+      <div class="project-tags" style="margin-bottom: 18px;">
+        <span class="project-tag">Next.js</span>
+        <span class="project-tag">React</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">Express.js</span>
+        <span class="project-tag">MongoDB</span>
+        <span class="project-tag">Better Auth</span>
+        <span class="project-tag">Google OAuth</span>
+        <span class="project-tag">JWT</span>
+        <span class="project-tag">Tailwind CSS</span>
+        <span class="project-tag">HeroUI</span>
+        <span class="project-tag">Vercel</span>
+      </div>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Description</p>
+      <p class="resume-desc" style="margin-bottom: 18px;">
+        SportNest is a full-stack sports facility booking management system. Users can browse and search for sports
+        facilities, filter by type, view detailed facility information, and book available slots by selecting a date,
+        time slot, and duration. The platform also allows users to view and cancel their own bookings.
+      </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Key Features</p>
+      <ul class="feature-list">
+        <li>Browse, search, and filter sports facilities by type</li>
+        <li>Book facilities by selecting date, time slot, and duration</li>
+        <li>View and cancel personal bookings</li>
+        <li>Add, update, and delete facility listings</li>
+        <li>Secure authentication — email/password and Google OAuth via Better Auth</li>
+        <li>JWT verification on the backend to protect sensitive API routes</li>
+        <li>Separate client and server architecture connected through REST APIs</li>
+        <li>Deployed on Vercel with MongoDB Atlas as the database</li>
+      </ul>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Challenges Faced</p>
+      <p class="resume-desc" style="margin-bottom: 18px;">
+        Implementing JWT-based route protection across a decoupled client-server architecture required careful
+        coordination of token handling on both ends. Syncing authentication state (Better Auth + Google OAuth) with
+        backend-verified JWTs, while maintaining a smooth UX, was the most complex part of the build.
+      </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Future Improvements</p>
+      <p class="resume-desc">
+        Add real-time availability updates with WebSockets, implement an admin dashboard for facility owners, introduce
+        payment gateway integration, and add email confirmation notifications for bookings.
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
