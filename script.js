@@ -8,6 +8,17 @@ let prevCy = cy;
 let lastEchoTime = 0;
 
 const cursorEl = document.getElementById('cursor');
+
+// Detect touch/coarse-pointer devices — disable custom cursor & spotlight on them
+const isTouchDevice = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+if (isTouchDevice) {
+  // Show the full coloured portrait on touch (spotlight never fires)
+  const imgAltTouch = document.getElementById('img-alt');
+  if (imgAltTouch) imgAltTouch.style.clipPath = 'circle(100% at 50% 50%)';
+  if (cursorEl) cursorEl.style.display = 'none';
+}
+
 document.addEventListener('mousemove', (e) => {
   mx = e.clientX;
   my = e.clientY;
@@ -58,6 +69,9 @@ function spawnEcho() {
 }
 
 function loop() {
+  // Skip expensive animations on touch devices
+  if (isTouchDevice) return;
+
   cx += (mx - cx) * 0.1;
   cy += (my - cy) * 0.1;
   const speed = dist(cx, cy, prevCx, prevCy);
@@ -176,6 +190,11 @@ function toggleNav() {
   if (!navEl) return;
   setNavOpen(!navEl.classList.contains('open'));
 }
+
+// Close hamburger menu when resizing to desktop width
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 600) setNavOpen(false);
+});
 
 if (navToggle) {
   navToggle.addEventListener('click', (e) => {

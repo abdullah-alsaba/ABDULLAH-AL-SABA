@@ -1139,93 +1139,8 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  #about-img {
-    width: 30%;
-  }
 
-  #about-content {
-    padding: 64px 44px 48px 40px;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
-  #about-img {
-    display: none;
-  }
-
-  #about-content {
-    padding: 56px 32px 40px;
-  }
-
-  #back-btn {
-    right: 32px;
-    top: 32px;
-  }
-
-  #nav {
-    right: 28px;
-  }
-
-  .nav-links {
-    gap: 20px;
-  }
-
-  #name {
-    left: 28px;
-    top: 36px;
-  }
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-  #nav {
-    top: 36px;
-  }
-
-  .nav-toggle {
-    display: inline-flex;
-  }
-
-  .nav-links {
-    display: none;
-  }
-
-  #name {
-    font-size: 1.5rem;
-  }
-
-  #about-content {
-    padding: 44px 20px 32px;
-  }
-
-  #back-btn {
-    right: 20px;
-    top: 22px;
-  }
-
-  .journey-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
-  }
-
-  .project-link {
-    width: 100%;
-  }
-}
-
+/* ── Large desktop (1440px+) ── */
 @media (min-width: 1440px) {
   #name {
     top: 56px;
@@ -1247,9 +1162,346 @@ body {
     bottom: 60px;
     left: 72px;
   }
+
+  #about-content {
+    padding: 88px 72px 64px 64px;
+  }
 }
 
-/* Touch / non-hover devices: use normal cursor & hide custom cursor */
+/* ── Tablet landscape (1024px and below) ── */
+@media (max-width: 1024px) {
+  #about-img {
+    width: 30%;
+  }
+
+  #about-content {
+    padding: 64px 44px 48px 40px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-heading {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+  }
+}
+
+/* ── Tablet portrait (768px and below) ── */
+@media (max-width: 768px) {
+  #about-img {
+    display: none;
+  }
+
+  #about-panel {
+    flex-direction: column;
+  }
+
+  #about-content {
+    padding: 56px 32px 40px;
+    flex: 1 1 auto;
+    min-height: 0;
+  }
+
+  #back-btn {
+    right: 32px;
+    top: 32px;
+  }
+
+  #nav {
+    right: 28px;
+    top: 36px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  #name {
+    left: 28px;
+    top: 36px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-heading {
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+  }
+
+  #about-subnav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    margin-bottom: 36px;
+  }
+
+  #about-subnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subnav-btn {
+    flex-shrink: 0;
+  }
+
+  #about-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* ── Mobile (600px and below) ── */
+@media (max-width: 600px) {
+  /* Hero: name & nav don't overlap */
+  #name {
+    left: 20px;
+    top: 24px;
+    font-size: clamp(1.35rem, 6vw, 1.8rem);
+    line-height: 1.1;
+  }
+
+  #nav {
+    top: 24px;
+    right: 16px;
+  }
+
+  /* Hamburger visible, desktop links hidden */
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Tagline — tuck to bottom with safe area */
+  #tagline {
+    left: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    font-size: 0.58rem;
+  }
+
+  /* Socials — vertical strip on right bottom */
+  #socials {
+    right: 16px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    gap: 12px;
+  }
+
+  #socials a {
+    width: 34px;
+    height: 34px;
+  }
+
+  /* About panel */
+  #about-content {
+    padding: 52px 18px 32px;
+  }
+
+  #back-btn {
+    right: 18px;
+    top: 18px;
+  }
+
+  /* Subnav: single horizontal scroll row */
+  #about-subnav {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    gap: 8px;
+    margin-bottom: 32px;
+  }
+
+  #about-subnav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subnav-btn {
+    flex-shrink: 0;
+    font-size: 0.55rem;
+    padding: 7px 16px;
+  }
+
+  /* Headings */
+  .about-heading {
+    font-size: clamp(1.6rem, 7vw, 2.4rem);
+    margin-bottom: 24px;
+  }
+
+  .about-body {
+    font-size: 1.05rem;
+    margin-bottom: 28px;
+  }
+
+  /* Journey timeline */
+  .journey-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  /* Projects */
+  .project-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .project-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Contact form */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Footer */
+  #about-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  #about-footer-links {
+    gap: 14px;
+  }
+}
+
+/* ── Small mobile (480px and below) ── */
+@media (max-width: 480px) {
+  #name {
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+  }
+
+  .about-heading {
+    font-size: clamp(1.4rem, 8vw, 2.1rem);
+  }
+
+  .contact-card {
+    padding: 16px 14px;
+  }
+
+  .project-card {
+    padding: 16px 14px 14px;
+  }
+
+  .resume-download {
+    padding: 11px 20px;
+    font-size: 0.58rem;
+  }
+}
+
+/* ── Very small (375px and below — iPhone SE, etc.) ── */
+@media (max-width: 375px) {
+  #name {
+    font-size: 1.1rem;
+    top: 20px;
+    left: 14px;
+  }
+
+  #nav {
+    top: 20px;
+    right: 12px;
+  }
+
+  #about-content {
+    padding: 48px 14px 28px;
+  }
+
+  #back-btn {
+    right: 14px;
+    top: 14px;
+  }
+
+  .subnav-btn {
+    padding: 6px 12px;
+    font-size: 0.52rem;
+  }
+
+  .about-heading {
+    font-size: clamp(1.25rem, 8vw, 1.8rem);
+  }
+
+  .about-body {
+    font-size: 1rem;
+  }
+}
+
+/* ── Landscape orientation on small phones ── */
+@media (max-width: 767px) and (orientation: landscape) and (max-height: 480px) {
+  #about-content {
+    padding: 40px 24px 24px;
+  }
+
+  #back-btn {
+    top: 12px;
+    right: 16px;
+  }
+
+  #about-subnav {
+    margin-bottom: 20px;
+  }
+
+  .about-heading {
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    margin-bottom: 16px;
+  }
+
+  .about-body {
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+  }
+
+  #name {
+    top: 12px;
+    left: 16px;
+    font-size: 1.1rem;
+  }
+
+  #nav {
+    top: 12px;
+    right: 12px;
+  }
+
+  #socials {
+    bottom: 10px;
+    right: 12px;
+    gap: 8px;
+  }
+
+  #socials a {
+    width: 30px;
+    height: 30px;
+  }
+
+  #tagline {
+    bottom: 10px;
+    left: 16px;
+  }
+}
+
+/* ── Touch / non-hover devices: use normal cursor & hide custom cursor ── */
 @media (hover: none), (pointer: coarse) {
   html,
   body {
@@ -1262,12 +1514,33 @@ body {
   }
 
   #back-btn,
+  .nav-toggle,
   .subnav-btn,
   .resume-download,
   .project-card,
   .project-link,
+  .form-submit,
   .contact-value a,
+  .nav-menu-link,
   .modal-close {
     cursor: pointer;
+  }
+
+  /* Ensure tap targets are large enough */
+  .subnav-btn {
+    min-height: 40px;
+  }
+
+  .project-link {
+    min-height: 40px;
+  }
+
+  .form-submit {
+    min-height: 44px;
+  }
+
+  #socials a {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
