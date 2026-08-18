@@ -15,7 +15,7 @@
 
 ## Overview
 
-A personal portfolio website built entirely with vanilla HTML, CSS, and JavaScript. The site features a dark, cinematic aesthetic — designed to reflect my dual identity as a creative developer and photographer. It includes an about section, photography gallery, resume, and project showcase.
+A personal portfolio website built entirely with vanilla HTML, CSS, and JavaScript. The site features a dark, cinematic aesthetic — designed to reflect my dual identity as a creative developer. It includes an about section, resume, and project showcase.
 
 ---
 
@@ -92,7 +92,7 @@ python -m http.server 8000
 ABDULLA-AL-SABA/
 ├── index.html          # Main entry point
 ├── favicon/            # Favicon assets
-├── photography/        # Photography gallery assets
+├── projects/          # projects gallery 
 ├── profile/
 │   └── abdulla.png     # Portfolio mockup image
 └── CNAME               # Custom domain config
