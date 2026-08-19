@@ -1,6 +1,6 @@
 # Abdulla Al Saba — Personal Portfolio
 
-> A creative developer and photographer's personal portfolio — crafting meaningful digital experiences at the intersection of technology, art, and human connection.
+> A creative developers personal portfolio — crafting meaningful digital experiences at the intersection of technology, art, and human connection.
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-abdulla.pro.bd-black?style=flat-square)](https://abdulla.pro.bd/)
 [![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-181717?style=flat-square&logo=github)](https://github.com/abdullah-alsaba/ABDULLA-AL-SABA)
@@ -33,7 +33,7 @@ A personal portfolio website built entirely with vanilla HTML, CSS, and JavaScri
 
 - **Cinematic Landing Page** — Full-viewport portrait with animated blob elements and smooth transitions
 - **About Section** — Personal bio with skill tags (Node.js, React, MongoDB, REST APIs, Tailwind CSS, JavaScript)
-- **Photography Gallery** — Dedicated section to showcase photography work
+- **Education Page** — Dedicated section to showcase Education journey
 - **Resume Page** — Clean, viewable resume layout
 - **Projects Showcase** — Highlights of development work
 - **Social Links** — LinkedIn, GitHub, X (Twitter), and Email integrated into the UI

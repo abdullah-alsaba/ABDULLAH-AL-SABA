@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="NexaFlow — A productivity and workflow management web app built with Next.js, React, and Tailwind CSS.">
   <title>NexaFlow — Details</title>
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap"
@@ -46,6 +48,32 @@
       margin-bottom: 18px;
     }
 
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-list li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.55);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.85rem;
+    }
+
     @media (max-width: 520px) {
       .detail-inner {
         padding: 20px;
@@ -78,27 +106,40 @@
 
       <p class="resume-title" style="margin-bottom: 10px;">Tech Stack</p>
       <div class="project-tags" style="margin-bottom: 18px;">
-        <span class="project-tag">Web App</span>
-        <span class="project-tag">UI</span>
-        <span class="project-tag">UX</span>
+        <span class="project-tag">Next.js</span>
+        <span class="project-tag">React</span>
+        <span class="project-tag">Tailwind CSS</span>
+        <span class="project-tag">Netlify</span>
       </div>
 
       <p class="resume-title" style="margin-bottom: 10px;">Description</p>
       <p class="resume-desc" style="margin-bottom: 18px;">
-        A modern productivity and workflow management web app called NexaFlow. Designed to improve task organization and
-        workflow efficiency with a clean UI and smooth UX.
+        NexaFlow is a modern productivity and workflow management web app built with Next.js and React. It's
+        designed to improve task organization and workflow efficiency through a clean, minimal interface and a
+        smooth, distraction-free user experience.
       </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Key Features</p>
+      <ul class="feature-list">
+        <li>Clean, organized task and workflow management interface</li>
+        <li>Component-based architecture built with Next.js and React</li>
+        <li>Responsive layout styled with Tailwind CSS utility classes</li>
+        <li>Support for multiple workflow states and task organization</li>
+        <li>Fast, minimal UI focused on reducing friction in daily use</li>
+        <li>Deployed on Netlify for continuous delivery</li>
+      </ul>
 
       <p class="resume-title" style="margin-bottom: 10px;">Challenges Faced</p>
       <p class="resume-desc" style="margin-bottom: 18px;">
-        Keeping the UX simple while supporting multiple workflow states, and ensuring the UI remains consistent and
-        responsive across devices.
+        Keeping the UX simple while supporting multiple workflow states was the core design challenge. Ensuring the
+        UI stayed consistent and fully responsive across devices required careful component structuring and
+        Tailwind layout planning.
       </p>
 
       <p class="resume-title" style="margin-bottom: 10px;">Future Improvements</p>
       <p class="resume-desc">
-        Add more advanced workflow automation, improve performance for large task lists, and expand onboarding for first
-        time users.
+        Add more advanced workflow automation, improve performance for large task lists, and expand onboarding for
+        first-time users.
       </p>
     </section>
   </main>
