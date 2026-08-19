@@ -329,12 +329,12 @@
             <div class="project-card">
               <p class="project-number">03</p>
               <p class="project-title">SportNest</p>
-              <p class="project-desc">A full-stack sports facility booking management system. Users can browse, filter,
-                and book sports facilities by date, time slot, and duration. Chose JWT over session-based auth to keep
-                the API stateless and scalable across the email/password and Google OAuth flows, with all booking routes
-                protected via middleware. Designed the MongoDB schema around normalized Facility, Booking, and User
-                collections with referenced ObjectIds to keep booking history queries fast and avoid data duplication.
-                Also includes facility management (add, update, delete).</p>
+              <p class="project-desc">A full-stack sports facility booking platform, similar in spirit to Playo or
+                BookMyTurf. Users can search, filter, and book facilities by date and time slot, while logged-in owners
+                can list and manage their own facilities. Chose a JWT stored in an HttpOnly cookie over local storage to
+                keep auth state secure and persistent across page reloads, verified through Express middleware on every
+                protected route. Designed the MongoDB schema around normalized Facility, Booking, and User collections
+                with referenced ObjectIds to keep booking history queries fast and avoid data duplication.</p>
               <div class="project-actions">
                 <a class="project-link" href="./projects/sportnest.html">View Details</a>
                 <a class="project-link" href="https://sportnest-teal.vercel.app/" target="_blank"
@@ -351,6 +351,7 @@
                 <span class="project-tag">Express.js</span>
                 <span class="project-tag">MongoDB</span>
                 <span class="project-tag">JWT</span>
+                <span class="project-tag">Framer Motion</span>
                 <span class="project-tag">Tailwind CSS</span>
               </div>
             </div>

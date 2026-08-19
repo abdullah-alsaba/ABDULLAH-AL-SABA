@@ -118,33 +118,44 @@
         <span class="project-tag">JWT</span>
         <span class="project-tag">Tailwind CSS</span>
         <span class="project-tag">HeroUI</span>
+        <span class="project-tag">Framer Motion</span>
         <span class="project-tag">Vercel</span>
       </div>
 
       <p class="resume-title" style="margin-bottom: 10px;">Description</p>
       <p class="resume-desc" style="margin-bottom: 18px;">
-        SportNest is a full-stack sports facility booking management system. Users can browse and search for sports
-        facilities, filter by type, view detailed facility information, and book available slots by selecting a date,
-        time slot, and duration. The platform also allows users to view and cancel their own bookings.
+        SportNest is a full-stack sports facility booking platform, similar in spirit to Playo or BookMyTurf. Users
+        can explore facilities such as football turfs, badminton courts, and swimming lanes, then book a specific
+        date and time slot. Logged-in users can also list and manage their own facilities, turning the platform into
+        a two-sided marketplace between facility owners and bookers rather than a simple listing site.
       </p>
 
       <p class="resume-title" style="margin-bottom: 10px;">Key Features</p>
       <ul class="feature-list">
-        <li>Browse, search, and filter sports facilities by type</li>
-        <li>Book facilities by selecting date, time slot, and duration</li>
-        <li>View and cancel personal bookings</li>
-        <li>Add, update, and delete facility listings</li>
+        <li>Search facilities by name and filter by sport type using MongoDB $regex and $in queries</li>
+        <li>Book facilities by selecting a date, time slot, and duration, with live price calculation</li>
+        <li>View, track status, and cancel personal bookings from a private "My Bookings" page</li>
+        <li>Add, update, and delete facility listings from a private "Manage My Facilities" dashboard</li>
         <li>Secure authentication — email/password and Google OAuth via Better Auth</li>
-        <li>JWT verification on the backend to protect sensitive API routes</li>
+        <li>JWT issued and stored in an HttpOnly cookie, verified in Express middleware to protect private API routes
+        </li>
+        <li>Private routes stay authenticated on page reload — no unwanted redirect to login</li>
+        <li>Light/dark theme toggle and Framer Motion page and component transitions</li>
+        <li>Custom loading spinner and a friendly 404 page for unmatched routes</li>
         <li>Separate client and server architecture connected through REST APIs</li>
-        <li>Deployed on Vercel with MongoDB Atlas as the database</li>
+        <li>Deployed on Vercel with MongoDB Atlas as the database, with credentials secured via environment variables
+        </li>
       </ul>
 
       <p class="resume-title" style="margin-bottom: 10px;">Challenges Faced</p>
       <p class="resume-desc" style="margin-bottom: 18px;">
-        Implementing JWT-based route protection across a decoupled client-server architecture required careful
-        coordination of token handling on both ends. Syncing authentication state (Better Auth + Google OAuth) with
-        backend-verified JWTs, while maintaining a smooth UX, was the most complex part of the build.
+        Storing the JWT in an HttpOnly cookie instead of local storage meant rethinking how the client checked auth
+        state — I had to make sure logged-in users stayed authenticated on a hard reload of any private route,
+        without ever being incorrectly bounced to the login page. Coordinating that with Better Auth's Google OAuth
+        flow, while keeping the Express middleware strict about verifying every protected request, was the trickiest
+        part of the build. Getting the search and filter system right also took a few iterations — combining
+        MongoDB's <code>$regex</code> for partial name matches with <code>$in</code> for multi-type filtering without
+        slowing down the facilities list.
       </p>
 
       <p class="resume-title" style="margin-bottom: 10px;">Future Improvements</p>
