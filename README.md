@@ -1,6 +1,6 @@
 # Abdulla Al Saba — Personal Portfolio
 
-> A creative developers personal portfolio — crafting meaningful digital experiences at the intersection of technology, art, and human connection.
+> A creative developer's personal portfolio — crafting meaningful digital experiences at the intersection of technology and human connection.
 
 [![Live Site](https://img.shields.io/badge/Live%20Site-abdulla.pro.bd-black?style=flat-square)](https://abdulla.pro.bd/)
 [![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-181717?style=flat-square&logo=github)](https://github.com/abdullah-alsaba/ABDULLA-AL-SABA)
@@ -92,7 +92,7 @@ python -m http.server 8000
 ABDULLA-AL-SABA/
 ├── index.html          # Main entry point
 ├── favicon/            # Favicon assets
-├── projects/          # projects gallery 
+├── projects/          # Projects gallery 
 ├── profile/
 │   └── abdulla.png     # Portfolio mockup image
 └── CNAME               # Custom domain config
