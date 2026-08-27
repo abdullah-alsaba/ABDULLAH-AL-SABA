@@ -51,12 +51,12 @@ const heroStats = document.getElementById('hero-stats');
 const heroCta = document.getElementById('hero-cta');
 
 const parallaxEls = [
-  { el: nameEl, s: 1 },
+  { el: nameEl, s: 0.8 },
   { el: navEl, s: 0.6 },
   { el: socials, s: 0.5 },
   { el: tagline, s: 0.4 },
   { el: heroStats, s: 0.8 },
-  { el: heroCta, s: 0.7 },
+  { el: heroCta, s: 0.8 },
 ];
 
 function dist(ax, ay, bx, by) {
