@@ -26,11 +26,11 @@ document.addEventListener('mousemove', (e) => {
 
 function getSpotlightR() {
   const vw = window.innerWidth;
-  if (vw >= 2560) return 200;
-  if (vw >= 1440) return 150;
-  if (vw >= 1024) return 130;
-  if (vw >= 768) return 110;
-  return 80;
+  if (vw >= 2560) return 160;
+  if (vw >= 1440) return 120;
+  if (vw >= 1024) return 104;
+  if (vw >= 768) return 88;
+  return 64;
 }
 
 let SPOTLIGHT_R = getSpotlightR();
@@ -47,12 +47,16 @@ const nameEl = document.getElementById('name');
 const navEl = document.getElementById('nav');
 const socials = document.getElementById('socials');
 const tagline = document.getElementById('tagline');
+const heroStats = document.getElementById('hero-stats');
+const heroCta = document.getElementById('hero-cta');
 
 const parallaxEls = [
   { el: nameEl, s: 1 },
   { el: navEl, s: 0.6 },
   { el: socials, s: 0.5 },
   { el: tagline, s: 0.4 },
+  { el: heroStats, s: 0.8 },
+  { el: heroCta, s: 0.7 },
 ];
 
 function dist(ax, ay, bx, by) {
@@ -144,6 +148,7 @@ function closeAbout() {
 const navAboutBtn = document.getElementById('nav-about-btn');
 const navSkillsBtn = document.getElementById('nav-skills-btn');
 const navResumeBtn = document.getElementById('nav-resume-btn');
+const navExperienceBtn = document.getElementById('nav-experience-btn');
 const navProjectsBtn = document.getElementById('nav-projects-btn');
 const navContactBtn = document.getElementById('nav-contact-btn');
 
@@ -162,12 +167,29 @@ if (navResumeBtn) navResumeBtn.addEventListener('click', (e) => {
   openAbout('sec-resume');
 });
 
+if (navExperienceBtn) navExperienceBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  openAbout('sec-experience');
+});
+
 if (navProjectsBtn) navProjectsBtn.addEventListener('click', (e) => {
   e.preventDefault();
   openAbout('sec-projects');
 });
 
 if (navContactBtn) navContactBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  openAbout('sec-contact');
+});
+
+const ctaProjects = document.getElementById('cta-projects');
+if (ctaProjects) ctaProjects.addEventListener('click', (e) => {
+  e.preventDefault();
+  openAbout('sec-projects');
+});
+
+const ctaContact = document.getElementById('cta-contact');
+if (ctaContact) ctaContact.addEventListener('click', (e) => {
   e.preventDefault();
   openAbout('sec-contact');
 });
@@ -350,7 +372,7 @@ if (contactForm) {
 }
 
 // ===== Cursor hover effect on interactive elements =====
-document.querySelectorAll('a, button, .project-card, .subnav-btn, .project-link, .modal-close').forEach((el) => {
+document.querySelectorAll('a, button, .project-card, .subnav-btn, .project-link, .modal-close, .cta-btn, .whatsapp-btn').forEach((el) => {
   el.addEventListener('mouseenter', () => cursorEl?.classList.add('big'));
   el.addEventListener('mouseleave', () => cursorEl?.classList.remove('big'));
 });

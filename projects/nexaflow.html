@@ -117,29 +117,36 @@
         NexaFlow is a modern productivity and workflow management web app built with Next.js and React. It's
         designed to improve task organization and workflow efficiency through a clean, minimal interface and a
         smooth, distraction-free user experience.
+        <br><br>
+        <!-- TODO: Verify NexaFlow tech stack, description, and feature accuracy — confirm details and add to resume for consistency -->
       </p>
 
       <p class="resume-title" style="margin-bottom: 10px;">Key Features</p>
       <ul class="feature-list">
-        <li>Clean, organized task and workflow management interface</li>
-        <li>Component-based architecture built with Next.js and React</li>
-        <li>Responsive layout styled with Tailwind CSS utility classes</li>
-        <li>Support for multiple workflow states and task organization</li>
-        <li>Fast, minimal UI focused on reducing friction in daily use</li>
-        <li>Deployed on Netlify for continuous delivery</li>
+        <li>Clean, organized task and workflow management interface with a kanban-style column layout</li>
+        <li>Component-based architecture built with Next.js and React — task cards, columns, and header are reusable components</li>
+        <li>Responsive layout styled with Tailwind CSS utility classes using responsive grid for column reflow on mobile</li>
+        <li>Support for multiple workflow states (To Do / In Progress / Done) with visual status indicators</li>
+        <li>Fast, minimal UI focused on reducing friction in daily use with zero external drag-and-drop dependencies</li>
+        <li>Deployed on Netlify for continuous delivery and automatic deploy previews</li>
       </ul>
 
       <p class="resume-title" style="margin-bottom: 10px;">Challenges Faced</p>
       <p class="resume-desc" style="margin-bottom: 18px;">
-        Keeping the UX simple while supporting multiple workflow states was the core design challenge. Ensuring the
+        Keeping the UX simple while supporting multiple workflow states was the core design challenge. I decided
+        against pulling in a third-party drag-and-drop library like react-beautiful-dnd because it would add 30KB+
+        to the bundle and the initial scope only needed column-based state organization — instead I used simple click-based
+        state transitions with Tailwind-animated status badges, keeping the bundle lean. Ensuring the
         UI stayed consistent and fully responsive across devices required careful component structuring and
-        Tailwind layout planning.
+        Tailwind layout planning, especially collapsing the multi-column kanban view into a single-column stack on mobile
+        without losing the visual distinction between workflow states.
       </p>
 
       <p class="resume-title" style="margin-bottom: 10px;">Future Improvements</p>
       <p class="resume-desc">
-        Add more advanced workflow automation, improve performance for large task lists, and expand onboarding for
-        first-time users.
+        Add more advanced workflow automation with rules/triggers, integrate a lightweight drag-and-drop library for
+        card reordering once the scope justifies it, improve rendering performance for large task lists with virtualized lists,
+        expand onboarding for first-time users with a guided tour, and add localStorage persistence for anonymous users.
       </p>
     </section>
   </main>

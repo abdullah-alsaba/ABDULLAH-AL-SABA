@@ -126,20 +126,24 @@
 
       <p class="resume-title" style="margin-bottom: 10px;">Key Features</p>
       <ul class="feature-list">
-        <li>Responsive interface optimized for all screen sizes</li>
-        <li>Organized course-related content and structured layout</li>
-        <li>Reusable React component architecture</li>
-        <li>Dynamic rendering of educational content</li>
-        <li>Client-side navigation and routing</li>
-        <li>Modern layout and styling techniques</li>
-        <li>Deployed on Vercel for fast and reliable access</li>
+        <li>Responsive interface optimized for all screen sizes with mobile-first CSS Grid layouts</li>
+        <li>Organized course-related content and structured layout using Next.js file-based routing for clean page separation</li>
+        <li>Reusable React component architecture — CourseCard, Navbar, and Footer components used across multiple pages</li>
+        <li>Dynamic rendering of educational content through structured data arrays mapped to component props</li>
+        <li>Client-side navigation and routing via Next.js Link component for zero-page-reload transitions</li>
+        <li>Modern layout and styling techniques with CSS custom properties for theming</li>
+        <li>Deployed on Vercel for fast and reliable access with automatic preview deployments on every Git push</li>
       </ul>
 
       <p class="resume-title" style="margin-bottom: 10px;">Challenges Faced</p>
       <p class="resume-desc" style="margin-bottom: 18px;">
         Structuring reusable components efficiently while keeping the UI consistent across different content types
-        was the primary challenge. Ensuring the layout remained clean and responsive across all device sizes
-        required careful planning of the component hierarchy and CSS layout strategies.
+        was the primary challenge. I specifically had to decide how to split the course listing page between a
+        reusable CourseCard component (for individual cards) and a CourseGrid wrapper that handled the responsive grid layout and
+        gap sizing — putting the grid logic in the parent kept the card component truly reusable on both the home page and
+        dedicated course listing page without duplicated styles. Ensuring the layout remained clean and responsive across
+        all device sizes required careful planning of the component hierarchy and CSS layout strategies,
+        particularly balancing CSS Grid for two-dimensional course listings and Flexbox for one-dimensional navigation and card internals.
       </p>
 
       <p class="resume-title" style="margin-bottom: 10px;">Future Improvements</p>
