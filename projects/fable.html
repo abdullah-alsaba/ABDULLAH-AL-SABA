@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Fable — A full-stack ebook sharing and publishing platform built with Next.js, React, Node.js, Express.js, and MongoDB.">
+  <title>Fable — Details</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="../favicon/my-brand.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    html,
+    body {
+      overflow: auto;
+      cursor: auto;
+    }
+
+    #cursor,
+    .echo {
+      display: none !important;
+    }
+
+    .detail-wrap {
+      min-height: 100vh;
+      background: #0e0e0e;
+      padding: 56px 20px;
+    }
+
+    .detail-inner {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 28px;
+    }
+
+    .detail-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-list li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.55);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.85rem;
+    }
+
+    .metric-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid rgba(110, 231, 183, 0.35);
+      border-radius: 999px;
+      background: rgba(110, 231, 183, 0.06);
+      color: rgba(167, 243, 208, 0.9);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .metric-badge.is-neutral {
+      border-color: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .metric-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .metric-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.98rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 18px;
+    }
+
+    @media (max-width: 520px) {
+      .detail-inner {
+        padding: 20px;
+      }
+
+      .detail-top {
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="detail-wrap">
+    <section class="detail-inner">
+      <div class="detail-top">
+        <div>
+          <p class="about-eyebrow">Project Details</p>
+          <h1 class="about-heading">Fable<br>Ebook Platform.</h1>
+        </div>
+        <a class="project-link" href="../index.html">Back to Home</a>
+      </div>
+
+      <div class="project-actions" style="margin-bottom: 16px;">
+        <a class="project-link" href="https://fable-nine-ashy.vercel.app/" target="_blank" rel="noreferrer">Live</a>
+        <a class="project-link" href="https://github.com/abdullah-alsaba/Fable_client.git" target="_blank"
+          rel="noreferrer">Client</a>
+        <a class="project-link" href="https://github.com/abdullah-alsaba/Fable_server.git" target="_blank"
+          rel="noreferrer">Server</a>
+      </div>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Tech Stack</p>
+      <div class="project-tags" style="margin-bottom: 18px;">
+        <span class="project-tag">Next.js</span>
+        <span class="project-tag">React</span>
+        <span class="project-tag">Node.js</span>
+        <span class="project-tag">Express.js</span>
+        <span class="project-tag">MongoDB</span>
+        <span class="project-tag">BetterAuth</span>
+        <span class="project-tag">Stripe</span>
+        <span class="project-tag">Tailwind CSS</span>
+      </div>
+
+      <p class="resume-title" style="margin-bottom: 10px;">By the Numbers</p>
+      <div class="metric-row">
+        <span class="metric-badge">100/100 Best Practices</span>
+        <span class="metric-badge">100/100 SEO</span>
+        <span class="metric-badge">92/100 Accessibility</span>
+        <span class="metric-badge is-neutral">82/100 Performance (Mobile)</span>
+      </div>
+      <p class="metric-note">
+        Audited with Lighthouse on a live, image-heavy, database-backed deployment — not a static
+        page. The performance score reflects real network calls, Stripe integration, and
+        dynamically loaded book cover images, unlike a static portfolio site.
+      </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Description</p>
+      <p class="resume-desc" style="margin-bottom: 18px;">
+        Fable is a full-stack digital ebook sharing and publishing platform designed for readers and independent
+        writers. Readers can discover, purchase, bookmark, and read ebooks, while writers can publish and manage
+        their own books.
+        <br><br>
+        The platform includes role-based access for Readers, Writers, and Admins, secure authentication with
+        BetterAuth and JWT, Stripe payments, imgBB image uploads, search and filtering, pagination, responsive
+        dashboards, and admin analytics with interactive charts.
+      </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Key Features</p>
+      <ul class="feature-list">
+        <li>Role-based dashboards and access control for Readers, Writers, and Admins</li>
+        <li>Secure authentication with email/password login, Google OAuth, BetterAuth, and JWT</li>
+        <li>Readers can browse, search, filter, bookmark, purchase, and read ebooks</li>
+        <li>Writers can publish, edit, unpublish, and manage their ebooks and sales</li>
+        <li>Stripe Checkout integration for ebook purchases and writer publishing payments</li>
+        <li>Admin dashboard with user management, ebook moderation, transaction history, and analytics charts</li>
+        <li>Responsive UI with dark mode, loading states, skeleton loaders, and smooth Framer Motion animations</li>
+        <li>imgBB integration for ebook cover and profile image uploads</li>
+      </ul>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Challenges Faced</p>
+      <p class="resume-desc" style="margin-bottom: 18px;">
+        One of the main challenges was managing different user roles and permissions across the platform. Each role
+        required different dashboard features and access levels, so I had to carefully handle authentication,
+        authorization, and protected routes.
+        <br><br>
+        Integrating Stripe was another important part of the project. I needed to connect the payment flow with the
+        backend so that successful purchases were properly recorded and the purchased ebook could be unlocked for
+        the reader. Keeping the frontend, backend, authentication, and database state synchronized required careful
+        API and data-flow planning.
+      </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Future Improvements</p>
+      <p class="resume-desc">
+        Future improvements could include a more advanced recommendation system, reader reviews and ratings,
+        personalized reading lists, improved writer analytics, email notifications, and additional payment and
+        publishing features.
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
