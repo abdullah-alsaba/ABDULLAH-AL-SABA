@@ -506,16 +506,25 @@ body {
   inset: 0;
   z-index: 2;
   display: flex;
+  flex-direction: column;
   transform: translateX(100%);
   opacity: 0;
   transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1), opacity 0.9s ease;
   pointer-events: none;
+  background: #0e0e0e;
 }
 
 #about-panel.active {
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
+}
+
+/* Row that holds the image strip + scrollable content */
+#about-panel-main {
+  display: flex;
+  flex: 1;
+  min-height: 0;
 }
 
 /* Left column - decorative image strip */
@@ -541,16 +550,18 @@ body {
   background: linear-gradient(to right, transparent 60%, #0e0e0e 100%);
 }
 
-/* Right column - content */
+/* Right column - content (this is the ONLY scroll container in the panel;
+   the footer now lives inside it, so it scrolls into view at the end) */
 #about-content {
   flex: 1;
   background: #0e0e0e;
-  padding: 80px 64px 60px 56px;
+  padding: 80px 64px 40px 56px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   overflow-y: auto;
   position: relative;
+  min-width: 0;
 }
 
 
@@ -774,7 +785,17 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
-  margin-bottom: 36px;
+  margin-bottom: 56px;
+}
+
+/* "Tools I use" card — nudged slightly right of the other cards, and its
+   tag row replaces the usual grid layout used by the skill-item groups */
+/* .skills-group-tags {
+  margin-left: 12px;
+} */
+
+.skills-group-tags .skills-row {
+  margin-bottom: 0;
 }
 
 .skills-group {
@@ -1268,10 +1289,13 @@ body {
   flex-shrink: 0;
 }
 
-/* Footer row inside about */
+/* Footer - now lives INSIDE #about-content (the scroll container), as the
+   last element after every section, instead of being pinned outside it.
+   That's what makes it appear only once the user scrolls to the end,
+   rather than sitting fixed/cropped at the bottom of the viewport. */
 #about-footer {
-  margin-top: 48px;
-  padding-top: 28px;
+  margin-top: 56px;
+  padding-top: 22px;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
   align-items: center;
@@ -1419,7 +1443,7 @@ body {
   }
 
   #about-content {
-    padding: 88px 72px 64px 64px;
+    padding: 88px 72px 40px 64px;
   }
 }
 
@@ -1430,7 +1454,7 @@ body {
   }
 
   #about-content {
-    padding: 64px 44px 48px 40px;
+    padding: 64px 44px 32px 40px;
   }
 
   .projects-grid {
@@ -1466,8 +1490,12 @@ body {
     flex-direction: column;
   }
 
+  #about-panel-main {
+    flex-direction: column;
+  }
+
   #about-content {
-    padding: 56px 32px 40px;
+    padding: 56px 32px 32px;
     flex: 1 1 auto;
     min-height: 0;
   }
@@ -1552,6 +1580,7 @@ body {
 
 /* ── Mobile (600px and below) ── */
 @media (max-width: 600px) {
+
   /* Hero: name & nav don't overlap */
   #name {
     left: 20px;
@@ -1652,7 +1681,7 @@ body {
 
   /* About panel */
   #about-content {
-    padding: 52px 18px 32px;
+    padding: 52px 18px 24px;
   }
 
   #back-btn {
@@ -1704,6 +1733,10 @@ body {
     grid-template-columns: 1fr;
   }
 
+  .skills-group-tags {
+    margin-left: 0;
+  }
+
   /* Projects */
   .project-actions {
     flex-direction: column;
@@ -1734,7 +1767,8 @@ body {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
-    margin-top: 32px;
+    margin-top: 40px;
+    padding-top: 18px;
   }
 
   #about-footer-links {
@@ -1839,7 +1873,7 @@ body {
   }
 
   #about-content {
-    padding: 48px 14px 28px;
+    padding: 48px 14px 24px;
   }
 
   #back-btn {
@@ -1986,7 +2020,9 @@ body {
 }
 
 /* ── Touch / non-hover devices: use normal cursor & hide custom cursor ── */
-@media (hover: none), (pointer: coarse) {
+@media (hover: none),
+(pointer: coarse) {
+
   html,
   body {
     cursor: auto;

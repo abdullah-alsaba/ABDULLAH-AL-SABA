@@ -114,485 +114,497 @@
 
   <!-- ===== ABOUT PANEL ===== -->
   <div id="about-panel">
-    <div id="about-img">
-      <img src="./profile/abdullaal.png" alt="Abdulla Al Saba" />
-    </div>
-    <div id="about-content">
-
-      <button id="back-btn">
-        <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 12H5M12 5l-7 7 7 7" />
-        </svg>
-        Back
-      </button>
-
-      <div>
-        <!-- Sub-navigation -->
-        <div id="about-subnav">
-          <button class="subnav-btn active" data-target="sec-about">About Me</button>
-          <button class="subnav-btn" data-target="sec-skills">Skills</button>
-          <button class="subnav-btn" data-target="sec-resume">Education</button>
-          <button class="subnav-btn" data-target="sec-experience">Experience</button>
-          <button class="subnav-btn" data-target="sec-projects">Projects</button>
-          <button class="subnav-btn" data-target="sec-contact">Contact</button>
-        </div>
-
-        <!-- ABOUT ME -->
-        <div id="sec-about" class="about-section visible">
-          <p class="about-eyebrow">Who I Am</p>
-          <h1 class="about-heading">Crafting<br><em>meaningful</em><br>experiences.</h1>
-
-          <p class="about-body">
-            I'm <strong>Abdulla Al Saba</strong>, a <strong>MERN Stack Developer</strong> who enjoys turning ideas into
-            clean, responsive, and scalable web applications. What pulled me into programming wasn't a single
-            moment — it was the slow realization that every website I used was just logic and structure someone had
-            carefully put together, and I wanted to learn how to build that myself.
-          </p>
-
-          <p class="about-body">
-            I work across the full stack: on the backend, I design <strong>REST APIs</strong>, build secure
-            <strong>JWT and OAuth authentication flows</strong>, and work with <strong>MongoDB</strong> for data
-            modeling and management. On the frontend, I craft interfaces with
-            <strong>React, Next.js, TypeScript, and Tailwind CSS</strong>. Alongside project work, I practice
-            algorithmic problem-solving on <strong>LeetCode</strong> to keep my DSA fundamentals sharp — because
-            solid architecture and clean logic come from the same foundation.
-          </p>
-
-          <p class="about-body">
-            I'm currently pursuing a <strong>BSc in Chemistry</strong> at Dhaka Central University, but software
-            development is where I direct most of my time and energy — it's a deliberate choice, not a backup plan.
-            I care about writing code that's easy to reason about, not just code that works.
-          </p>
-
-          <p class="about-body"
-            style="font-style: italic; color: rgba(255,255,255,0.5); border-left: 2px solid rgba(255,255,255,0.15); padding-left: 16px;">
-            Building full-stack applications with React, Next.js, TypeScript, Node.js, Express.js, and MongoDB —
-            with a focus on clean architecture, secure authentication, and responsive user experiences.
-          </p>
-        </div>
-
-        <!-- SKILLS -->
-        <div id="sec-skills" class="about-section">
-          <p class="about-eyebrow">Skills</p>
-          <h1 class="about-heading">My<br>skills.</h1>
-
-          <div class="skills-groups">
-            <div class="skills-group">
-              <p class="skills-group-title">Frontend</p>
-              <div class="skills-group-list">
-                <div class="skill-item">
-                  <div class="skill-name">React.js</div>
-                  <div class="skill-desc">Components, hooks, state, UI patterns</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-name">Next.js</div>
-                   <div class="skill-desc">App Router, SSR, API routes, routing, deployment</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-name">TypeScript</div>
-                  <div class="skill-desc">Types, interfaces, generics, type-safe development</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-name">JavaScript (ES6+)</div>
-                  <div class="skill-desc">Core language, async programming, DOM</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-name">Tailwind CSS / DaisyUI</div>
-                  <div class="skill-desc">Utility-first styling, responsive layouts</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-name">HTML5 / CSS3</div>
-                  <div class="skill-desc">Semantic structure, layouts, animations</div>
-                </div>
-
-                <div class="skill-item">
-                  <div class="skill-name">Framer Motion</div>
-                  <div class="skill-desc">Page and component animations</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills-group">
-            <p class="skills-group-title">Backend</p>
-            <div class="skills-group-list">
-              <div class="skill-item">
-                <div class="skill-name">Node.js / Express.js</div>
-                <div class="skill-desc">REST API design & structure</div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-name">Authentication</div>
-                <div class="skill-desc">JWT, OAuth, Better Auth, HttpOnly cookie-based auth</div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-name">MongoDB</div>
-                <div class="skill-desc">Schema design, normalized collections, relational queries</div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-name">REST APIs</div>
-                <div class="skill-desc">CRUD, filtering, search endpoints</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="skills-group">
-            <p class="skills-group-title">Tools &amp; Deployment</p>
-            <div class="skills-group-list">
-              <div class="skill-item">
-                <div class="skill-name">Git / GitHub</div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-name">Vercel, Netlify, Render, Railway</div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-name">Vite, Firebase</div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-name">LeetCode</div>
-                <div class="skill-desc">DSA / problem solving</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <p class="resume-title" style="margin-bottom: 10px;">Tools I use</p>
-        <div class="skills-row" style="margin-bottom: 0; margin-top: 10px;">
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Express.js</span>
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">MongoDB</span>
-          <span class="skill-tag">Next.js</span>
-          <span class="skill-tag">REST APIs</span>
-          <span class="skill-tag">JWT</span>
-          <span class="skill-tag">OAuth</span>
-          <span class="skill-tag">Vercel</span>
-          <span class="skill-tag">Render</span>
-          <span class="skill-tag">Railway</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Tailwind CSS</span>
-        </div>
+    <div id="about-panel-main">
+      <div id="about-img">
+        <img src="./profile/abdullaal.png" alt="Abdulla Al Saba" />
       </div>
+      <div id="about-content">
 
-      <!-- RESUME -->
-      <div id="sec-resume" class="about-section">
-        <p class="about-eyebrow">Education</p>
-        <h1 class="about-heading">My<br>educational journey.</h1>
+        <button id="back-btn">
+          <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M12 5l-7 7 7 7" />
+          </svg>
+          Back
+        </button>
 
-        <p class="about-body" style="margin-bottom: 24px;">
-          While pursuing my BSc in Chemistry, I discovered a strong interest in web development
-          and started learning to code on my own. Since then, I have been building projects and
-          developing my web development skills alongside my academic studies.
-        </p>
-
-        <p class="section-label">Education</p>
-        <div class="journey" aria-label="Education timeline">
-          <div class="journey-item">
-            <div class="journey-row">
-              <div class="journey-degree">BSc in Chemistry</div>
-              <div class="journey-year">Ongoing</div>
-            </div>
-            <div class="journey-org">Dhaka Central University</div>
+        <div>
+          <!-- Sub-navigation -->
+          <div id="about-subnav">
+            <button class="subnav-btn active" data-target="sec-about">About Me</button>
+            <button class="subnav-btn" data-target="sec-skills">Skills</button>
+            <button class="subnav-btn" data-target="sec-resume">Education</button>
+            <button class="subnav-btn" data-target="sec-experience">Experience</button>
+            <button class="subnav-btn" data-target="sec-projects">Projects</button>
+            <button class="subnav-btn" data-target="sec-contact">Contact</button>
           </div>
 
-          <div class="journey-item">
-            <div class="journey-row">
-              <div class="journey-degree">HSC</div>
-              <div class="journey-year">2021</div>
-            </div>
-            <div class="journey-org">Nishindara Fakir Uddin School and College</div>
-          </div>
+          <!-- ABOUT ME -->
+          <div id="sec-about" class="about-section visible">
+            <p class="about-eyebrow">Who I Am</p>
+            <h1 class="about-heading">Crafting<br><em>meaningful</em><br>experiences.</h1>
 
-          <div class="journey-item">
-            <div class="journey-row">
-              <div class="journey-degree">Alim (equivalent to HSC / A-Level)</div>
-              <div class="journey-year">TODO</div>
-            </div>
-            <div class="journey-org">TODO: Add institution name</div>
-          </div>
-
-          <div class="journey-item">
-            <div class="journey-row">
-              <div class="journey-degree">Dakhil (equivalent to SSC / O-Level)</div>
-              <div class="journey-year">2019</div>
-            </div>
-            <div class="journey-org">Nasaratpur Dhontola Alim Madrasha</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- EXPERIENCE -->
-      <div id="sec-experience" class="about-section">
-        <p class="about-eyebrow">Work History</p>
-        <h1 class="about-heading">My<br>experience.</h1>
-
-        <p class="about-body" style="margin-bottom: 24px;">
-          Roles and positions that shaped my approach to development, collaboration, and
-          structured thinking — long before I wrote my first line of production code.
-        </p>
-
-        <p class="section-label">Experience</p>
-        <div class="journey" aria-label="Work experience timeline">
-          <div class="journey-item">
-            <div class="journey-row">
-              <div class="journey-degree">Computer Lab Assistant (Part-Time)</div>
-              <div class="journey-year">Jan 2025 – Jan 2026</div>
-            </div>
-            <div class="journey-org">Faisal's Commerce Lab — Dhaka, Bangladesh</div>
-            <ul class="journey-bullets">
-              <li>Managed and formatted structured digital documents, spreadsheets, and records — early exposure to
-                organized, systematic workflows that later shaped how I approach clean, structured code.</li>
-              <li>Coordinated with teachers and students to gather information and prepare materials, building
-                communication and attention-to-detail habits relevant to client/collaborative work.</li>
-              <li>Handled document editing and basic image editing in Photoshop, maintaining organized digital file
-                systems — a habit that carried over into how I structure project folders and codebases today.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROJECTS -->
-      <div id="sec-projects" class="about-section">
-        <p class="about-eyebrow">Selected Work</p>
-        <h1 class="about-heading">What I've<br>built.</h1>
-
-        <div class="projects-grid">
-          <div class="project-card">
-            <p class="project-number">01</p>
-            <p class="project-title">Personal Portfolio Website</p>
-            <p class="project-desc">My personal portfolio website — fully responsive, built from scratch with custom
-              cursor interactions and smooth section transitions. Deployed with a custom domain and SEO optimization.
-            </p>
-            <div class="project-metrics">
-              <span class="metric-badge metric-badge-accent">100/100 Lighthouse (Accessibility / Best Practices /
-                SEO)</span>
-            </div>
-            <div class="project-actions">
-              <a class="project-link" href="./projects/portfolio.html">View Details</a>
-              <a class="project-link" href="https://abdulla.pro.bd/" target="_blank" rel="noreferrer">Live</a>
-              <a class="project-link" href="https://github.com/abdullah-alsaba/ABDULLA-AL-SABA" target="_blank"
-                rel="noreferrer">GitHub</a>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-              <span class="project-tag">JavaScript</span>
-            </div>
-          </div>
-
-          <div class="project-card">
-            <p class="project-number">02</p>
-            <p class="project-title">SkillSphere</p>
-            <p class="project-desc">An online learning platform designed to deliver an engaging and user-friendly
-              educational experience. Features a responsive interface, organized course content, and reusable React
-              components — demonstrating modern frontend architecture and clean UI development. Structured the app
-              around Next.js file-based routing with reusable course card components to keep page code DRY, and used
-              CSS Grid layouts for course listings rather than flexbox so content scales predictably across device
-              sizes.</p>
-            <div class="project-metrics">
-              <span class="metric-badge metric-badge-accent">92/100 PERFORMANCE</span>
-              <span class="metric-badge metric-badge-accent">100/100 BEST PRACTICES</span>
-              <span class="metric-badge metric-badge-accent">100/100 SEO</span>
-            </div>
-            <div class="project-actions">
-              <a class="project-link" href="./projects/skillsphere.html">View Details</a>
-              <a class="project-link" href="https://skillsphere-omega-neon.vercel.app/" target="_blank"
-                rel="noreferrer">Live</a>
-              <a class="project-link" href="https://github.com/abdullah-alsaba/SkillSphereb" target="_blank"
-                rel="noreferrer">GitHub</a>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Next.js</span>
-              <span class="project-tag">React</span>
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">CSS</span>
-            </div>
-          </div>
-
-
-          <div class="project-card">
-            <p class="project-number">03</p>
-            <p class="project-title">Fable</p>
-            <p class="project-desc">
-              A full-stack digital ebook sharing and publishing platform built for readers and independent writers.
-              Fable allows readers to discover, purchase, bookmark, and read ebooks, while writers can publish and
-              manage
-              their own books. The platform includes role-based access for Readers, Writers, and Admins, secure
-              authentication,
-              Stripe payments, ebook management, image uploads, search and filtering, responsive dashboards, and admin
-              analytics.
+            <p class="about-body">
+              I'm <strong>Abdulla Al Saba</strong>, a <strong>MERN Stack Developer</strong> who enjoys turning ideas
+              into
+              clean, responsive, and scalable web applications. What pulled me into programming wasn't a single
+              moment — it was the slow realization that every website I used was just logic and structure someone had
+              carefully put together, and I wanted to learn how to build that myself.
             </p>
 
-            <div class="project-metrics">
-              <span class="metric-badge metric-badge-accent">100/100 BEST PRACTICES</span>
-              <span class="metric-badge metric-badge-accent">100/100 SEO</span>
-            </div>
+            <p class="about-body">
+              I work across the full stack: on the backend, I design <strong>REST APIs</strong>, build secure
+              <strong>JWT and OAuth authentication flows</strong>, and work with <strong>MongoDB</strong> for data
+              modeling and management. On the frontend, I craft interfaces with
+              <strong>React, Next.js, TypeScript, and Tailwind CSS</strong>. Alongside project work, I practice
+              algorithmic problem-solving on <strong>LeetCode</strong> to keep my DSA fundamentals sharp — because
+              solid architecture and clean logic come from the same foundation.
+            </p>
 
-            <div class="project-actions">
-              <a class="project-link" href="./projects/fable.html">View Details</a>
-              <a class="project-link" href="https://fable-nine-ashy.vercel.app/" target="_blank"
-                rel="noreferrer">Live</a>
-              <a class="project-link" href="https://github.com/abdullah-alsaba/Fable_client" target="_blank"
-                rel="noreferrer">Client</a>
-              <a class="project-link" href="https://github.com/abdullah-alsaba/Fable_server" target="_blank"
-                rel="noreferrer">Server</a>
-            </div>
+            <p class="about-body">
+              I'm currently pursuing a <strong>BSc in Chemistry</strong> at Dhaka Central University, but software
+              development is where I direct most of my time and energy — it's a deliberate choice, not a backup plan.
+              I care about writing code that's easy to reason about, not just code that works.
+            </p>
 
-            <div class="project-tags">
-              <span class="project-tag">Next.js</span>
-              <span class="project-tag">React</span>
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">Express.js</span>
-              <span class="project-tag">MongoDB</span>
-              <span class="project-tag">Stripe</span>
+            <p class="about-body"
+              style="font-style: italic; color: rgba(255,255,255,0.5); border-left: 2px solid rgba(255,255,255,0.15); padding-left: 16px;">
+              Building full-stack applications with React, Next.js, TypeScript, Node.js, Express.js, and MongoDB —
+              with a focus on clean architecture, secure authentication, and responsive user experiences.
+            </p>
+          </div>
+
+          <!-- SKILLS -->
+          <div id="sec-skills" class="about-section">
+            <p class="about-eyebrow">Skills</p>
+            <h1 class="about-heading">My<br>skills.</h1>
+
+            <div class="skills-groups">
+              <div class="skills-group">
+                <p class="skills-group-title">Frontend</p>
+                <div class="skills-group-list">
+                  <div class="skill-item">
+                    <div class="skill-name">React.js</div>
+                    <div class="skill-desc">Components, hooks, state, UI patterns</div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-name">Next.js</div>
+                    <div class="skill-desc">App Router, SSR, API routes, routing, deployment</div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-name">TypeScript</div>
+                    <div class="skill-desc">Types, interfaces, generics, type-safe development</div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-name">JavaScript (ES6+)</div>
+                    <div class="skill-desc">Core language, async programming, DOM</div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-name">Tailwind CSS / DaisyUI</div>
+                    <div class="skill-desc">Utility-first styling, responsive layouts</div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-name">HTML5 / CSS3</div>
+                    <div class="skill-desc">Semantic structure, layouts, animations</div>
+                  </div>
+
+                  <div class="skill-item">
+                    <div class="skill-name">Framer Motion</div>
+                    <div class="skill-desc">Page and component animations</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-group">
+                <p class="skills-group-title">Backend</p>
+                <div class="skills-group-list">
+                  <div class="skill-item">
+                    <div class="skill-name">Node.js / Express.js</div>
+                    <div class="skill-desc">REST API design & structure</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-name">Authentication</div>
+                    <div class="skill-desc">JWT, OAuth, Better Auth, HttpOnly cookie-based auth</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-name">MongoDB</div>
+                    <div class="skill-desc">Schema design, normalized collections, relational queries</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-name">REST APIs</div>
+                    <div class="skill-desc">CRUD, filtering, search endpoints</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-group">
+                <p class="skills-group-title">Tools &amp; Deployment</p>
+                <div class="skills-group-list">
+                  <div class="skill-item">
+                    <div class="skill-name">Git / GitHub</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-name">Vercel, Netlify, Render, Railway</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-name">Vite, Firebase</div>
+                  </div>
+                  <div class="skill-item">
+                    <div class="skill-name">LeetCode</div>
+                    <div class="skill-desc">DSA / problem solving</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="skills-group-tags">
+                <p class="skills-group-title">Tools I use</p>
+                <div class="skills-row">
+                  <span class="skill-tag">Node.js</span>
+                  <span class="skill-tag">Express.js</span>
+                  <span class="skill-tag">React</span>
+                  <span class="skill-tag">MongoDB</span>
+                  <span class="skill-tag">Next.js</span>
+                  <span class="skill-tag">REST APIs</span>
+                  <span class="skill-tag">JWT</span>
+                  <span class="skill-tag">OAuth</span>
+                  <span class="skill-tag">Vercel</span>
+                  <span class="skill-tag">Render</span>
+                  <span class="skill-tag">Railway</span>
+                  <span class="skill-tag">JavaScript</span>
+                  <span class="skill-tag">TypeScript</span>
+                  <span class="skill-tag">Tailwind CSS</span>
+                </div>
+              </div>
             </div>
           </div>
 
+          <!-- RESUME -->
+          <div id="sec-resume" class="about-section">
+            <p class="about-eyebrow">Education</p>
+            <h1 class="about-heading">My<br>educational journey.</h1>
 
-          <div class="project-card">
-            <p class="project-number">04</p>
-            <p class="project-title">SportNest</p>
-            <p class="project-desc">A full-stack sports facility booking platform, similar in spirit to Playo or
-              BookMyTurf. Users can search, filter, and book facilities by date and time slot, while logged-in owners
-              can list and manage their own facilities. Chose a JWT stored in an HttpOnly cookie over local storage to
-              keep auth state secure and persistent across page reloads, verified through Express middleware on every
-              protected route. Designed the MongoDB schema around normalized Facility, Booking, and User collections
-              with referenced ObjectIds to keep booking history queries fast and avoid data duplication.</p>
-            <div class="project-metrics">
-              <span class="metric-badge">8 REST API Endpoints</span>
-              <span class="metric-badge">88 Lighthouse Performance</span>
-              <span class="metric-badge metric-badge-accent">96 Lighthouse Accessibility</span>
-              <span class="metric-badge">3 MongoDB Collections</span>
-            </div>
-            <div class="project-actions">
-              <a class="project-link" href="./projects/sportnest.html">View Details</a>
-              <a class="project-link" href="https://sportnest-teal.vercel.app/" target="_blank"
-                rel="noreferrer">Live</a>
-              <a class="project-link" href="https://github.com/abdullah-alsaba/SportNest-client" target="_blank"
-                rel="noreferrer">Client</a>
-              <a class="project-link" href="https://github.com/abdullah-alsaba/SportNest-server" target="_blank"
-                rel="noreferrer">Server</a>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Next.js</span>
-              <span class="project-tag">React</span>
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">Express.js</span>
-              <span class="project-tag">MongoDB</span>
-              <span class="project-tag">JWT</span>
-              <span class="project-tag">Framer Motion</span>
-              <span class="project-tag">Tailwind CSS</span>
-            </div>
-          </div>
-        </div>
-      </div>
+            <p class="about-body" style="margin-bottom: 24px;">
+              While pursuing my BSc in Chemistry, I discovered a strong interest in web development
+              and started learning to code on my own. Since then, I have been building projects and
+              developing my web development skills alongside my academic studies.
+            </p>
 
-      <!-- CONTACT -->
-      <div id="sec-contact" class="about-section">
-        <p class="about-eyebrow">Get In Touch</p>
-        <h1 class="about-heading">Let's<br>connect.</h1>
-
-        <div class="contact-card">
-          <p class="about-body" style="margin-bottom: 18px; max-width: 680px;">
-            For collaboration, internships, or project inquiries, feel free to reach out. I typically respond within
-            24–48 hours.
-          </p>
-
-          <div class="contact-grid">
-            <div class="contact-item">
-              <div class="contact-label">Email</div>
-              <div class="contact-value">
-                <a href="mailto:abdullah.alsaba.dev@gmail.com">abdullah.alsaba.dev@gmail.com</a>
+            <p class="section-label">Education</p>
+            <div class="journey" aria-label="Education timeline">
+              <div class="journey-item">
+                <div class="journey-row">
+                  <div class="journey-degree">BSc in Chemistry</div>
+                  <div class="journey-year">Ongoing</div>
+                </div>
+                <div class="journey-org">Dhaka Central University</div>
               </div>
-            </div>
 
-            <div class="contact-item">
-              <div class="contact-label">WhatsApp</div>
-              <div class="contact-value">
-                <a href="https://wa.me/8801537312828" target="_blank" rel="noreferrer">+880 1537-312828</a>
+              <div class="journey-item">
+                <div class="journey-row">
+                  <div class="journey-degree">HSC</div>
+                  <div class="journey-year">2021</div>
+                </div>
+                <div class="journey-org">Nishindara Fakir Uddin School and College</div>
+              </div>
+
+              <div class="journey-item">
+                <div class="journey-row">
+                  <div class="journey-degree">Alim (equivalent to HSC / A-Level)</div>
+                  <div class="journey-year">TODO</div>
+                </div>
+                <div class="journey-org">TODO: Add institution name</div>
+              </div>
+
+              <div class="journey-item">
+                <div class="journey-row">
+                  <div class="journey-degree">Dakhil (equivalent to SSC / O-Level)</div>
+                  <div class="journey-year">2019</div>
+                </div>
+                <div class="journey-org">Nasaratpur Dhontola Alim Madrasha</div>
               </div>
             </div>
           </div>
 
-          <div class="contact-cta-row">
-            <a class="whatsapp-btn" href="https://wa.me/8801537312828" target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 32 32" aria-hidden="true">
-                <path fill="currentColor"
-                  d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.064 2.263-.188 2.263.706 5.415 2.972 6.687 1.28.832 2.54 1.245 3.775 1.245.93 0 1.866-.315 2.654-.977.38-.315.988-1.315 1.273-1.588.187-.187.36-.143.607.042.52.427 1.314.93 1.915 1.175.293.114.523.172.707.172.26 0 .486-.05.68-.24.266-.264.49-.68.688-1.102.187-.407.345-.845.41-1.177.064-.332.03-.572-.13-.773-.36-.455-.816-.77-1.388-.77zm-3.09-12.642C7.65 4.563 0 11.97 0 20.933c0 3.646 1.485 7.06 4.18 9.606l-.42 1.54 1.585-.415a18.76 18.76 0 0 0 9.805 2.72h.01c9.265 0 16.843-7.408 16.843-16.535 0-4.416-1.72-8.557-4.855-11.66A16.455 16.455 0 0 0 16.02 4.563zm.006 2.168c3.81 0 7.357 1.478 10.03 4.152a14.285 14.285 0 0 1 4.147 10.05c0 7.872-6.767 14.276-15.11 14.276a16.63 16.63 0 0 1-8.513-2.375l-.607-.358-.6 2.2-.593.155-.618 2.26-.886.232a15.68 15.68 0 0 1-3.65-1.23l-.53-.265.355-.775c.107-.232.31-.65.457-.962a15.54 15.54 0 0 1-1.352-6.98c0-7.872 6.767-14.276 15.11-14.276zM26.01 26.94a1 1 0 0 1-.208 1.394 1 1 0 0 1-1.394-.208 9.313 9.313 0 0 0-7.192-3.18 9.313 9.313 0 0 0-6.65 2.765 1 1 0 1 1-1.332-1.49 11.304 11.304 0 0 1 7.982-3.32 11.304 11.304 0 0 1 8.994 3.864z" />
-              </svg>
-              Message on WhatsApp
-            </a>
+          <!-- EXPERIENCE -->
+          <div id="sec-experience" class="about-section">
+            <p class="about-eyebrow">Work History</p>
+            <h1 class="about-heading">My<br>experience.</h1>
+
+            <p class="about-body" style="margin-bottom: 24px;">
+              Roles and positions that shaped my approach to development, collaboration, and
+              structured thinking — long before I wrote my first line of production code.
+            </p>
+
+            <p class="section-label">Experience</p>
+            <div class="journey" aria-label="Work experience timeline">
+              <div class="journey-item">
+                <div class="journey-row">
+                  <div class="journey-degree">Computer Lab Assistant (Part-Time)</div>
+                  <div class="journey-year">Jan 2025 – Jan 2026</div>
+                </div>
+                <div class="journey-org">Faisal's Commerce Lab — Dhaka, Bangladesh</div>
+                <ul class="journey-bullets">
+                  <li>Managed and formatted structured digital documents, spreadsheets, and records — early exposure to
+                    organized, systematic workflows that later shaped how I approach clean, structured code.</li>
+                  <li>Coordinated with teachers and students to gather information and prepare materials, building
+                    communication and attention-to-detail habits relevant to client/collaborative work.</li>
+                  <li>Handled document editing and basic image editing in Photoshop, maintaining organized digital file
+                    systems — a habit that carried over into how I structure project folders and codebases today.</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
-          <form id="contact-form" class="contact-form" action="https://formsubmit.co/ajax/abdullah.alsaba.dev@gmail.com"
-            method="POST" novalidate>
-            <input type="hidden" name="_subject" value="New message from portfolio website" />
-            <input type="hidden" name="_template" value="table" />
-            <input type="text" name="_honey" class="contact-honey" tabindex="-1" autocomplete="off" />
+          <!-- PROJECTS -->
+          <div id="sec-projects" class="about-section">
+            <p class="about-eyebrow">Selected Work</p>
+            <h1 class="about-heading">What I've<br>built.</h1>
 
-            <div class="form-grid">
-              <div class="form-field">
-                <label class="form-label" for="contact-name">Your Name</label>
-                <input id="contact-name" class="form-input" name="name" type="text" placeholder="Your full name"
-                  required />
-                <div class="form-error" data-for="contact-name" aria-live="polite"></div>
+            <div class="projects-grid">
+              <div class="project-card">
+                <p class="project-number">01</p>
+                <p class="project-title">Personal Portfolio Website</p>
+                <p class="project-desc">My personal portfolio website — fully responsive, built from scratch with custom
+                  cursor interactions and smooth section transitions. Deployed with a custom domain and SEO
+                  optimization.
+                </p>
+                <div class="project-metrics">
+                  <span class="metric-badge metric-badge-accent">100/100 Lighthouse (Accessibility / Best Practices /
+                    SEO)</span>
+                </div>
+                <div class="project-actions">
+                  <a class="project-link" href="./projects/portfolio.html">View Details</a>
+                  <a class="project-link" href="https://abdulla.pro.bd/" target="_blank" rel="noreferrer">Live</a>
+                  <a class="project-link" href="https://github.com/abdullah-alsaba/ABDULLA-AL-SABA" target="_blank"
+                    rel="noreferrer">GitHub</a>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                  <span class="project-tag">JavaScript</span>
+                </div>
               </div>
 
-              <div class="form-field">
-                <label class="form-label" for="contact-email">Your Email</label>
-                <input id="contact-email" class="form-input" name="email" type="email" placeholder="you@example.com"
-                  required />
-                <div class="form-error" data-for="contact-email" aria-live="polite"></div>
+              <div class="project-card">
+                <p class="project-number">02</p>
+                <p class="project-title">SkillSphere</p>
+                <p class="project-desc">An online learning platform designed to deliver an engaging and user-friendly
+                  educational experience. Features a responsive interface, organized course content, and reusable React
+                  components — demonstrating modern frontend architecture and clean UI development. Structured the app
+                  around Next.js file-based routing with reusable course card components to keep page code DRY, and used
+                  CSS Grid layouts for course listings rather than flexbox so content scales predictably across device
+                  sizes.</p>
+                <div class="project-metrics">
+                  <span class="metric-badge metric-badge-accent">92/100 PERFORMANCE</span>
+                  <span class="metric-badge metric-badge-accent">100/100 BEST PRACTICES</span>
+                  <span class="metric-badge metric-badge-accent">100/100 SEO</span>
+                </div>
+                <div class="project-actions">
+                  <a class="project-link" href="./projects/skillsphere.html">View Details</a>
+                  <a class="project-link" href="https://skillsphere-omega-neon.vercel.app/" target="_blank"
+                    rel="noreferrer">Live</a>
+                  <a class="project-link" href="https://github.com/abdullah-alsaba/SkillSphereb" target="_blank"
+                    rel="noreferrer">GitHub</a>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">Next.js</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">JavaScript</span>
+                  <span class="project-tag">HTML</span>
+                  <span class="project-tag">CSS</span>
+                </div>
+              </div>
+
+
+              <div class="project-card">
+                <p class="project-number">03</p>
+                <p class="project-title">Fable</p>
+                <p class="project-desc">
+                  A full-stack digital ebook sharing and publishing platform built for readers and independent writers.
+                  Fable allows readers to discover, purchase, bookmark, and read ebooks, while writers can publish and
+                  manage
+                  their own books. The platform includes role-based access for Readers, Writers, and Admins, secure
+                  authentication,
+                  Stripe payments, ebook management, image uploads, search and filtering, responsive dashboards, and
+                  admin
+                  analytics.
+                </p>
+
+                <div class="project-metrics">
+                  <span class="metric-badge metric-badge-accent">100/100 BEST PRACTICES</span>
+                  <span class="metric-badge metric-badge-accent">100/100 SEO</span>
+                </div>
+
+                <div class="project-actions">
+                  <a class="project-link" href="./projects/fable.html">View Details</a>
+                  <a class="project-link" href="https://fable-nine-ashy.vercel.app/" target="_blank"
+                    rel="noreferrer">Live</a>
+                  <a class="project-link" href="https://github.com/abdullah-alsaba/Fable_client" target="_blank"
+                    rel="noreferrer">Client</a>
+                  <a class="project-link" href="https://github.com/abdullah-alsaba/Fable_server" target="_blank"
+                    rel="noreferrer">Server</a>
+                </div>
+
+                <div class="project-tags">
+                  <span class="project-tag">Next.js</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">Express.js</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">Stripe</span>
+                </div>
+              </div>
+
+
+              <div class="project-card">
+                <p class="project-number">04</p>
+                <p class="project-title">SportNest</p>
+                <p class="project-desc">A full-stack sports facility booking platform, similar in spirit to Playo or
+                  BookMyTurf. Users can search, filter, and book facilities by date and time slot, while logged-in
+                  owners
+                  can list and manage their own facilities. Chose a JWT stored in an HttpOnly cookie over local storage
+                  to
+                  keep auth state secure and persistent across page reloads, verified through Express middleware on
+                  every
+                  protected route. Designed the MongoDB schema around normalized Facility, Booking, and User collections
+                  with referenced ObjectIds to keep booking history queries fast and avoid data duplication.</p>
+                <div class="project-metrics">
+                  <span class="metric-badge">8 REST API Endpoints</span>
+                  <span class="metric-badge">88 Lighthouse Performance</span>
+                  <span class="metric-badge metric-badge-accent">96 Lighthouse Accessibility</span>
+                  <span class="metric-badge">3 MongoDB Collections</span>
+                </div>
+                <div class="project-actions">
+                  <a class="project-link" href="./projects/sportnest.html">View Details</a>
+                  <a class="project-link" href="https://sportnest-teal.vercel.app/" target="_blank"
+                    rel="noreferrer">Live</a>
+                  <a class="project-link" href="https://github.com/abdullah-alsaba/SportNest-client" target="_blank"
+                    rel="noreferrer">Client</a>
+                  <a class="project-link" href="https://github.com/abdullah-alsaba/SportNest-server" target="_blank"
+                    rel="noreferrer">Server</a>
+                </div>
+                <div class="project-tags">
+                  <span class="project-tag">Next.js</span>
+                  <span class="project-tag">React</span>
+                  <span class="project-tag">Node.js</span>
+                  <span class="project-tag">Express.js</span>
+                  <span class="project-tag">MongoDB</span>
+                  <span class="project-tag">JWT</span>
+                  <span class="project-tag">Framer Motion</span>
+                  <span class="project-tag">Tailwind CSS</span>
+                </div>
               </div>
             </div>
+          </div>
 
-            <div class="form-field">
-              <label class="form-label" for="contact-message">Your Message</label>
-              <textarea id="contact-message" class="form-textarea" name="message" rows="6"
-                placeholder="Tell me about your project…" required></textarea>
-              <div class="form-error" data-for="contact-message" aria-live="polite"></div>
-            </div>
+          <!-- CONTACT -->
+          <div id="sec-contact" class="about-section">
+            <p class="about-eyebrow">Get In Touch</p>
+            <h1 class="about-heading">Let's<br>connect.</h1>
 
-            <div class="form-actions">
-              <button id="contact-submit" class="form-submit" type="submit">Send Message</button>
-              <div id="contact-status" class="form-status" aria-live="polite">
-                <svg id="status-icon" viewBox="0 0 24 24" style="display:none;" width="18" height="18">
-                  <path id="status-icon-path" fill="none" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
+            <div class="contact-card">
+              <p class="about-body" style="margin-bottom: 18px; max-width: 680px;">
+                For collaboration, internships, or project inquiries, feel free to reach out. I typically respond within
+                24–48 hours.
+              </p>
+
+              <div class="contact-grid">
+                <div class="contact-item">
+                  <div class="contact-label">Email</div>
+                  <div class="contact-value">
+                    <a href="mailto:abdullah.alsaba.dev@gmail.com">abdullah.alsaba.dev@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="contact-item">
+                  <div class="contact-label">WhatsApp</div>
+                  <div class="contact-value">
+                    <a href="https://wa.me/8801537312828" target="_blank" rel="noreferrer">+880 1537-312828</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-cta-row">
+                <a class="whatsapp-btn" href="https://wa.me/8801537312828" target="_blank" rel="noreferrer">
+                  <svg viewBox="0 0 32 32" aria-hidden="true">
+                    <path fill="currentColor"
+                      d="M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.064 2.263-.188 2.263.706 5.415 2.972 6.687 1.28.832 2.54 1.245 3.775 1.245.93 0 1.866-.315 2.654-.977.38-.315.988-1.315 1.273-1.588.187-.187.36-.143.607.042.52.427 1.314.93 1.915 1.175.293.114.523.172.707.172.26 0 .486-.05.68-.24.266-.264.49-.68.688-1.102.187-.407.345-.845.41-1.177.064-.332.03-.572-.13-.773-.36-.455-.816-.77-1.388-.77zm-3.09-12.642C7.65 4.563 0 11.97 0 20.933c0 3.646 1.485 7.06 4.18 9.606l-.42 1.54 1.585-.415a18.76 18.76 0 0 0 9.805 2.72h.01c9.265 0 16.843-7.408 16.843-16.535 0-4.416-1.72-8.557-4.855-11.66A16.455 16.455 0 0 0 16.02 4.563zm.006 2.168c3.81 0 7.357 1.478 10.03 4.152a14.285 14.285 0 0 1 4.147 10.05c0 7.872-6.767 14.276-15.11 14.276a16.63 16.63 0 0 1-8.513-2.375l-.607-.358-.6 2.2-.593.155-.618 2.26-.886.232a15.68 15.68 0 0 1-3.65-1.23l-.53-.265.355-.775c.107-.232.31-.65.457-.962a15.54 15.54 0 0 1-1.352-6.98c0-7.872 6.767-14.276 15.11-14.276zM26.01 26.94a1 1 0 0 1-.208 1.394 1 1 0 0 1-1.394-.208 9.313 9.313 0 0 0-7.192-3.18 9.313 9.313 0 0 0-6.65 2.765 1 1 0 1 1-1.332-1.49 11.304 11.304 0 0 1 7.982-3.32 11.304 11.304 0 0 1 8.994 3.864z" />
+                  </svg>
+                  Message on WhatsApp
+                </a>
+              </div>
+
+              <form id="contact-form" class="contact-form"
+                action="https://formsubmit.co/ajax/abdullah.alsaba.dev@gmail.com" method="POST" novalidate>
+                <input type="hidden" name="_subject" value="New message from portfolio website" />
+                <input type="hidden" name="_template" value="table" />
+                <input type="text" name="_honey" class="contact-honey" tabindex="-1" autocomplete="off" />
+
+                <div class="form-grid">
+                  <div class="form-field">
+                    <label class="form-label" for="contact-name">Your Name</label>
+                    <input id="contact-name" class="form-input" name="name" type="text" placeholder="Your full name"
+                      required />
+                    <div class="form-error" data-for="contact-name" aria-live="polite"></div>
+                  </div>
+
+                  <div class="form-field">
+                    <label class="form-label" for="contact-email">Your Email</label>
+                    <input id="contact-email" class="form-input" name="email" type="email" placeholder="you@example.com"
+                      required />
+                    <div class="form-error" data-for="contact-email" aria-live="polite"></div>
+                  </div>
+                </div>
+
+                <div class="form-field">
+                  <label class="form-label" for="contact-message">Your Message</label>
+                  <textarea id="contact-message" class="form-textarea" name="message" rows="6"
+                    placeholder="Tell me about your project…" required></textarea>
+                  <div class="form-error" data-for="contact-message" aria-live="polite"></div>
+                </div>
+
+                <div class="form-actions">
+                  <button id="contact-submit" class="form-submit" type="submit">Send Message</button>
+                  <div id="contact-status" class="form-status" aria-live="polite">
+                    <svg id="status-icon" viewBox="0 0 24 24" style="display:none;" width="18" height="18">
+                      <path id="status-icon-path" fill="none" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                    <span id="status-text"></span>
+                  </div>
+                </div>
+              </form>
+
+              <div class="resume-divider"></div>
+              <p class="section-label">Resume</p>
+              <a class="resume-download" href="./Abdulla_Resume.pdf" target="_blank" rel="noreferrer"
+                id="view-resume-btn">
+                <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 5v14M5 12h14" />
                 </svg>
-                <span id="status-text"></span>
-              </div>
+                View Resume
+              </a>
             </div>
-          </form>
+          </div>
 
-          <div class="resume-divider"></div>
-          <p class="section-label">Resume</p>
-          <a class="resume-download" href="./Abdulla_Resume.pdf" target="_blank" rel="noreferrer" id="view-resume-btn">
-            <svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 5v14M5 12h14" />
-            </svg>
-            View Resume
-          </a>
+          <!-- FOOTER — lives inside the scrollable content, so it only comes
+             into view once the user has scrolled to the end of a section -->
+          <div id="about-footer">
+            <span id="about-footer-name">Abdulla Al Saba — © 2026</span>
+            <div id="about-footer-links">
+              <a href="https://www.linkedin.com/in/abdullah-alsaba/" target="_blank">LinkedIn</a>
+              <a href="https://github.com/abdullah-alsaba" target="_blank">GitHub</a>
+              <a href="mailto:abdullah.alsaba.dev@gmail.com">Email</a>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
-
-    <div id="about-footer">
-      <span id="about-footer-name">Abdulla Al Saba — © 2026</span>
-      <div id="about-footer-links">
-        <a href="https://www.linkedin.com/in/abdullah-alsaba/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/abdullah-alsaba" target="_blank">GitHub</a>
-        <a href="mailto:abdullah.alsaba.dev@gmail.com">Email</a>
-      </div>
-    </div>
-
-  </div>
   </div>
 
   <div id="cursor"></div>
