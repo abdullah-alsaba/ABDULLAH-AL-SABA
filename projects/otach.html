@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Otach — A luxury watch storefront built with Next.js App Router, Firebase Authentication, Firestore, and Tailwind CSS. Full shopping flow with catalogue, bag, checkout, and owner catalogue manager.">
+  <title>Otach — Details</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="../favicon/my-brand.svg" type="image/x-icon">
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    html,
+    body {
+      overflow: auto;
+      cursor: auto;
+    }
+
+    #cursor,
+    .echo {
+      display: none !important;
+    }
+
+    .detail-wrap {
+      min-height: 100vh;
+      background: #0e0e0e;
+      padding: 56px 20px;
+    }
+
+    .detail-inner {
+      width: min(980px, 100%);
+      margin: 0 auto;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.02);
+      padding: 28px;
+    }
+
+    .detail-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 18px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .feature-list li {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.55);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "—";
+      position: absolute;
+      left: 0;
+      color: rgba(255, 255, 255, 0.2);
+      font-size: 0.85rem;
+    }
+
+    .metric-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border: 1px solid rgba(110, 231, 183, 0.35);
+      border-radius: 999px;
+      background: rgba(110, 231, 183, 0.06);
+      color: rgba(167, 243, 208, 0.9);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .metric-badge.is-neutral {
+      border-color: rgba(255, 255, 255, 0.14);
+      background: rgba(255, 255, 255, 0.03);
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .metric-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .routes-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 18px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+    }
+
+    .routes-table th {
+      text-align: left;
+      padding: 8px 12px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.35);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .routes-table td {
+      padding: 8px 12px;
+      color: rgba(255, 255, 255, 0.55);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      line-height: 1.5;
+    }
+
+    .routes-table td:first-child {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      color: rgba(167, 243, 208, 0.75);
+      white-space: nowrap;
+    }
+
+    .routes-table td:nth-child(2) {
+      font-size: 0.82rem;
+      color: rgba(255, 255, 255, 0.35);
+    }
+
+    @media (max-width: 520px) {
+      .detail-inner {
+        padding: 20px;
+      }
+
+      .detail-top {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .routes-table td:nth-child(2) {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="detail-wrap">
+    <section class="detail-inner">
+      <div class="detail-top">
+        <div>
+          <p class="about-eyebrow">Project Details</p>
+          <h1 class="about-heading">Otach<br>Premium Timepieces.</h1>
+        </div>
+        <a class="project-link" href="../index.html">Back to Home</a>
+      </div>
+
+      <div class="project-actions" style="margin-bottom: 16px;">
+        <a class="project-link" href="https://otach.vercel.app/" target="_blank" rel="noreferrer">Live Demo</a>
+        <a class="project-link" href="https://github.com/abdullah-alsaba/otach" target="_blank"
+          rel="noreferrer">GitHub</a>
+      </div>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Tech Stack</p>
+      <div class="project-tags" style="margin-bottom: 18px;">
+        <span class="project-tag">Next.js 16.4.1</span>
+        <span class="project-tag">React 19</span>
+        <span class="project-tag">JavaScript (ES Modules)</span>
+        <span class="project-tag">Tailwind CSS v4</span>
+        <span class="project-tag">HeroUI</span>
+        <span class="project-tag">Firebase Authentication</span>
+        <span class="project-tag">Cloud Firestore</span>
+        <span class="project-tag">Framer Motion</span>
+        <span class="project-tag">Vercel</span>
+      </div>
+
+      <p class="resume-title" style="margin-bottom: 10px;">By the Numbers</p>
+      <div class="metric-row">
+        <span class="metric-badge">26 Timepieces Catalogued</span>
+        <span class="metric-badge">9 Items per Page</span>
+        <span class="metric-badge">3 Watch Categories</span>
+        <span class="metric-badge">Firebase Auth &amp; Firestore</span>
+        <span class="metric-badge is-neutral">App Router + Turbopack</span>
+      </div>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Description</p>
+      <p class="resume-desc" style="margin-bottom: 18px;">
+        Otach is a luxury watch storefront built with the Next.js App Router. It pairs a curated catalogue of
+        mechanical, smart, and sport timepieces with a complete shopping flow — catalogue browsing, filtering,
+        product detail pages, a persistent bag, checkout, and Firebase-backed authentication.
+        <br><br>
+        Signed-in members can also add and manage their own listings through a small owner-only catalogue manager.
+        The interface follows a restrained, editorial luxury-retail direction: a single teal accent, generous
+        spacing, quiet animations, and a focus on product photography.
+      </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Key Features</p>
+      <ul class="feature-list">
+        <li>Responsive landing page with hero, featured timepieces, category highlights, service guarantees, and a
+          closing call to action</li>
+        <li>Sticky, responsive navigation with a Shop menu, account menu, bag preview popover, and mobile drawer</li>
+        <li>Catalogue of 26 timepieces with search across name, tagline, description, and category</li>
+        <li>Filters by category (Analog / Smartwatch / Sport) and price range; sorting by featured, price, and name
+          A–Z; pagination at 9 items per page</li>
+        <li>Dynamic product detail route at <code>/items/[id]</code> with static generation, related timepieces,
+          breadcrumbs, and a branded 404 for unresolved IDs</li>
+        <li>Firebase Authentication with email/password and Google sign-in via a single AuthContext listener</li>
+        <li>Protected routes with redirect to <code>/login</code> and return to the intended destination after sign-in
+        </li>
+        <li>Add Product form with field-level validation writing to Firestore with ownership bound to the
+          authenticated UID</li>
+        <li>Manage Products page listing only the member's own listings, with view and delete actions</li>
+        <li>Cart context with quantity controls, per-item maximum, subtotal, and item count — persisted in localStorage
+          namespaced by Firebase UID</li>
+        <li>Validated delivery form with generated order reference in <code>OT-YYYY-XXXXXX</code> format</li>
+        <li>Toast notifications for auth, bag, and form outcomes across the app</li>
+      </ul>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Routes</p>
+      <table class="routes-table">
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Access</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/</td>
+            <td>Public</td>
+            <td>Landing page</td>
+          </tr>
+          <tr>
+            <td>/items</td>
+            <td>Public</td>
+            <td>Catalogue with search, filters, sorting, and pagination</td>
+          </tr>
+          <tr>
+            <td>/items/[id]</td>
+            <td>Public</td>
+            <td>Product detail; falls back to Firestore for owner-created records, then 404</td>
+          </tr>
+          <tr>
+            <td>/about</td>
+            <td>Public</td>
+            <td>Brand story, values, and craftsmanship</td>
+          </tr>
+          <tr>
+            <td>/cart</td>
+            <td>Public</td>
+            <td>Shopping bag with quantity management and subtotal</td>
+          </tr>
+          <tr>
+            <td>/checkout</td>
+            <td>Protected</td>
+            <td>Delivery form and order confirmation</td>
+          </tr>
+          <tr>
+            <td>/items/add</td>
+            <td>Protected</td>
+            <td>Create a timepiece listing</td>
+          </tr>
+          <tr>
+            <td>/items/manage</td>
+            <td>Protected</td>
+            <td>List, view, and delete your own timepieces</td>
+          </tr>
+          <tr>
+            <td>/login / /register</td>
+            <td>Public</td>
+            <td>Email/password and Google sign-in and account creation</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Challenges Faced</p>
+      <p class="resume-desc" style="margin-bottom: 18px;">
+        One of the trickiest parts was building the cart persistence layer correctly. Per-user localStorage
+        namespacing by Firebase UID meant the cart had to stay in sync with the auth state — loading the right
+        cart when a user signs in, flushing it on sign-out, and handling the brief moment Firebase is still
+        resolving the session on page load without showing a flicker or incorrect cart count.
+        <br><br>
+        Managing Firestore security rules alongside the owner-created product flow also required careful thought.
+        The rules had to allow each member to read and write only their own records, while keeping the public
+        catalogue fully accessible without authentication — and ensuring that a Firestore rule can't be used as a
+        query filter, so the client query had to explicitly filter by <code>userId</code> itself.
+      </p>
+
+      <p class="resume-title" style="margin-bottom: 10px;">Future Improvements</p>
+      <p class="resume-desc">
+        Future improvements could include a wishlist / favourites feature, server-side rendered catalogue pages
+        for better SEO on dynamic product data, real Stripe checkout integration to replace the simulated order
+        confirmation, review and rating system for timepieces, and an admin dashboard for moderation of
+        owner-submitted listings.
+      </p>
+    </section>
+  </main>
+</body>
+
+</html>
+
